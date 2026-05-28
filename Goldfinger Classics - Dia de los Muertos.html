@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Goldfinger Classics · Dia de los Muertos · 31 oktober 2026</title>
+<meta name="description" content="Goldfinger Classics keert terug: Dia de los Muertos. 31 oktober 2026 · De Kentering, Rosmalen. De dag dat de doden dansen.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="nav" data-screen-label="Navigatie">
+  <a href="#top" class="nav__logo" aria-label="Goldfinger Classics">
+    <img src="assets/logo-goldfinger.png" alt="Goldfinger Classics">
+  </a>
+  <div class="nav__links">
+    <a href="#feest">Het Feest</a>
+    <a href="#lineup">Line-up</a>
+    <a href="#galerij">Galerij</a>
+    <a href="#info">Info</a>
+    <a href="#contact">Contact</a>
+    <div class="nav__mob-footer">
+      <a href="#tickets" class="btn btn--fire btn--lg">Bestel tickets
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <div class="nav__mob-social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2c-.2-1.4-.8-2.1-2.2-2.3C17.8 5.5 12 5.5 12 5.5s-5.8 0-7.8.4C2.8 6.1 2.2 6.8 2 8.2 1.7 9.7 1.7 12 1.7 12s0 2.3.3 3.8c.2 1.4.8 2.1 2.2 2.3 2 .4 7.8.4 7.8.4s5.8 0 7.8-.4c1.4-.2 2-.9 2.2-2.3.3-1.5.3-3.8.3-3.8s0-2.3-.3-3.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+      </div>
+    </div>
+  </div>
+  <div class="nav__right">
+    <div class="nav__social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2c-.2-1.4-.8-2.1-2.2-2.3C17.8 5.5 12 5.5 12 5.5s-5.8 0-7.8.4C2.8 6.1 2.2 6.8 2 8.2 1.7 9.7 1.7 12 1.7 12s0 2.3.3 3.8c.2 1.4.8 2.1 2.2 2.3 2 .4 7.8.4 7.8.4s5.8 0 7.8-.4c1.4-.2 2-.9 2.2-2.3.3-1.5.3-3.8.3-3.8s0-2.3-.3-3.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+    </div>
+    <a href="#tickets" class="btn btn--gold">Tickets</a>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<header class="hero" id="top" data-screen-label="Hero — Dia de los Muertos">
+  <div class="hero__layers">
+    <div class="hero__layer hero__bg"></div>
+    <div class="hero__layer hero__catrina"></div>
+    <div class="hero__layer hero__smoke"></div>
+  </div>
+  <div class="hero__grade"></div>
+  <canvas id="embers"></canvas>
+
+  <div class="hero__content wrap">
+    <div class="hero__card">
+      <div class="hero__date">
+        <span class="brk l"></span> 31 Oktober 2026 <span class="brk r"></span>
+      </div>
+      <img class="hero__logo" src="assets/logo-goldfinger.png" alt="Goldfinger Classics">
+      <img class="hero__script" src="assets/title-dia.png" alt="Dia de los Muertos">
+      <p class="hero__sub">De nacht dat de doden dansen. Goldfinger Classics keert terug met de <strong>vertrouwde sound</strong>, ondergedompeld in marigold, vuur en duister. <strong>Bienvenido a la fiesta.</strong></p>
+
+      <div class="hero__cta">
+        <a href="#tickets" class="btn btn--fire btn--lg">Bestel tickets
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#lineup" class="btn btn--ghost btn--lg">Line-up</a>
+      </div>
+
+      <div class="countdown" aria-label="Aftellen tot het feest">
+        <div class="cd__cell"><div class="cd__num" id="cd-d">00</div><div class="cd__lbl">Dagen</div></div>
+        <div class="cd__cell"><div class="cd__num" id="cd-h">00</div><div class="cd__lbl">Uur</div></div>
+        <div class="cd__cell"><div class="cd__num" id="cd-m">00</div><div class="cd__lbl">Min</div></div>
+        <div class="cd__cell"><div class="cd__num" id="cd-s">00</div><div class="cd__lbl">Sec</div></div>
+      </div>
+
+      <div class="hero__venue">
+        <img src="assets/logo-kentering.png" alt="De Kentering">
+        <div class="vtxt"><b>De Kentering</b>Partycentrum · Rosmalen</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scrollcue"><div class="mouse"></div>Scroll</div>
+</header>
+
+<span class="picado" aria-hidden="true"></span>
+
+<section class="intro section-pad" id="feest" data-screen-label="Het Feest">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Het Feest</span><span class="rule"></span></div>
+    <div class="intro__grid">
+      <div>
+        <h2 class="display intro__big reveal">Eén nacht.<br><span class="fire-text">De doden</span> dansen mee.</h2>
+      </div>
+      <div>
+        <p class="intro__lead reveal d1">Op <strong>31 oktober 2026</strong> transformeert De Kentering tot een Mexicaans dodenrijk. Goldfinger Classics viert Dia de los Muertos: kleurrijk, rauw en grenzeloos.</p>
+        <p class="intro__body reveal d2">Verwacht een avond waarin de <strong>vertrouwde Goldfinger-sound</strong> samensmelt met het mysterie van het Día de los Muertos: marigold-bloemen, brandende kaarsen, sugar skulls en een line-up die de zaal tot leven wekt. Trek je mooiste Catrina-look aan en verdwijn in de nacht.</p>
+        <p class="intro__body reveal d3">Een viering van het leven, gevierd met de doden. <strong>Bestel snel je tickets en wees erbij.</strong></p>
+      </div>
+    </div>
+
+    <div class="facts facts--row reveal d2">
+      <div class="fact"><div class="fact__k">Datum</div><div class="fact__v">31 okt 2026<small>Zaterdagnacht</small></div></div>
+      <div class="fact"><div class="fact__k">Locatie</div><div class="fact__v">De Kentering<small>Rosmalen</small></div></div>
+      <div class="fact"><div class="fact__k">Thema</div><div class="fact__v">Dia de los Muertos<small>Dress to impress</small></div></div>
+      <div class="fact"><div class="fact__k">Leeftijd</div><div class="fact__v">18+<small>Legitimatie verplicht</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="lineup section-pad" id="lineup" data-screen-label="Line-up">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Line-up 2026</span><span class="rule"></span></div>
+    <div class="lineup__grid">
+      <article class="dj dj--head reveal">
+        <div class="dj__ph" data-ph="" style="background:url('assets/DJ/DarkRaver.jpg') center top/auto 100% no-repeat;"></div><div class="dj__glow"></div><div class="dj__veil"></div>
+        <div class="dj__meta"><div class="dj__tag">Headliner</div><div class="dj__name">Darkraver</div></div>
+      </article>
+      <article class="dj reveal d1"><div class="dj__ph" data-ph="dj foto"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Goldfinger</div><div class="dj__name">Mr. Gold</div></div></article>
+      <article class="dj reveal d2"><div class="dj__ph" data-ph="dj foto"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Legend</div><div class="dj__name">Dr. Rude</div></div></article>
+      <article class="dj reveal d1"><div class="dj__ph" data-ph="" style="background:url('assets/DJ/DJ-M.jpg') center top/cover no-repeat;"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Resident</div><div class="dj__name">DJ M</div></div></article>
+      <article class="dj reveal d2"><div class="dj__ph" data-ph="dj foto"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Resident</div><div class="dj__name">Francios</div></div></article>
+      <article class="dj reveal"><div class="dj__ph" data-ph="dj foto"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Special</div><div class="dj__name">Yves</div></div></article>
+      <article class="dj reveal d1"><div class="dj__ph" data-ph="dj foto"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">B2B set</div><div class="dj__name">Los Muertos</div></div></article>
+      <article class="dj reveal d2"><div class="dj__ph" data-ph="aankondiging"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">Binnenkort</div><div class="dj__name">TBA</div></div></article>
+      <article class="dj reveal d3"><div class="dj__ph" data-ph="aankondiging"></div><div class="dj__glow"></div><div class="dj__veil"></div><div class="dj__meta"><div class="dj__tag">& more</div><div class="dj__name">Surprise</div></div></article>
+    </div>
+    <p class="lineup__note reveal">Line-up onder voorbehoud · meer namen volgen</p>
+  </div>
+</section>
+
+<section class="gallery section-pad" id="galerij" data-screen-label="Galerij">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Galerij</span><span class="rule"></span></div>
+
+    <div class="gal__tabs reveal d1">
+      <button class="gal__tab active" data-year="2025"><span class="yr">’25</span> Ultimate Illusion <span class="pill">Highlights</span></button>
+      <button class="gal__tab" data-year="2024"><span class="yr">’24</span> The Awakening</button>
+      <button class="gal__tab" data-year="2023"><span class="yr">’23</span> Golden Hour</button>
+      <button class="gal__tab" data-year="2022"><span class="yr">’22</span> Reborn</button>
+    </div>
+
+    <div class="gal__panel active" data-year="2025">
+      <div class="gal__cap reveal"><h3>Ultimate Illusion <span>· 11 okt 2025</span></h3><p>De laatste editie in beeld · De Kentering, Rosmalen</p></div>
+      <div class="gal__grid reveal d1">
+        <div class="gtile t-big" data-ph="crowd 01"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5M9 11h4M11 9v4"/></svg></div></div>
+        <div class="gtile" data-ph="dj set 02"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="lichtshow 03"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-tall" data-ph="visual 04"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-wide" data-ph="mainstage 05"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="publiek 06"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="sfeer 07"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="confetti 08"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+      </div>
+    </div>
+
+    <div class="gal__panel" data-year="2024">
+      <div class="gal__cap reveal"><h3>The Awakening <span>· 2024</span></h3><p>Vorige editie · terugblik</p></div>
+      <div class="gal__grid">
+        <div class="gtile" data-ph="foto 01"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-wide" data-ph="foto 02"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 03"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-tall" data-ph="foto 04"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 05"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 06"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 07"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+      </div>
+    </div>
+
+    <div class="gal__panel" data-year="2023">
+      <div class="gal__cap reveal"><h3>Golden Hour <span>· 2023</span></h3><p>Vorige editie · terugblik</p></div>
+      <div class="gal__grid">
+        <div class="gtile t-tall" data-ph="foto 01"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 02"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 03"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-wide" data-ph="foto 04"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 05"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 06"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+      </div>
+    </div>
+
+    <div class="gal__panel" data-year="2022">
+      <div class="gal__cap reveal"><h3>Reborn <span>· 2022</span></h3><p>Vorige editie · terugblik</p></div>
+      <div class="gal__grid">
+        <div class="gtile" data-ph="foto 01"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 02"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile t-big" data-ph="foto 03"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 04"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+        <div class="gtile" data-ph="foto 05"><div class="gtile__img"></div><div class="zoom"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" role="dialog" aria-modal="true">
+  <div class="lightbox__inner">
+    <button class="lightbox__close" aria-label="Sluiten">&times;</button>
+    <button class="lightbox__nav prev" aria-label="Vorige">&#8249;</button>
+    <button class="lightbox__nav next" aria-label="Volgende">&#8250;</button>
+    <div class="lbimg"></div>
+    <span class="lightbox__cap"></span>
+  </div>
+</div>
+
+<section class="info section-pad" id="info" data-screen-label="Praktische info">
+  <div class="wrap">
+    <div class="sec-head reveal"><span class="kicker">Praktische info</span><span class="rule"></span></div>
+    <div class="info__grid">
+      <div class="info__card reveal">
+        <svg class="info__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        <h4>Locatie</h4>
+        <p><b>De Kentering</b>, Partycentrum<br>Deltalaan 162, Rosmalen<br>Gratis parkeren · goed bereikbaar</p>
+      </div>
+      <div class="info__card reveal d1">
+        <svg class="info__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg>
+        <h4>Datum & tijd</h4>
+        <p><b>Zaterdag 31 oktober 2026</b><br>Deuren open · 21:00<br>Einde · 03:00</p>
+      </div>
+      <div class="info__card reveal d2">
+        <svg class="info__ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        <h4>Goed om te weten</h4>
+        <p><b>18+</b> · legitimatie verplicht<br>Dress to impress: Catrina<br>Tickets enkel digitaal</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="tickets section-pad" id="tickets" data-screen-label="Tickets">
+  <div class="tickets__bg"></div>
+  <div class="tickets__veil"></div>
+  <div class="tickets__inner wrap">
+    <span class="kicker reveal" style="display:block;margin-bottom:18px">Wees erbij</span>
+    <h2 class="display reveal d1">Pak je plek in <span class="fire-text">het dodenrijk</span></h2>
+    <p class="reveal d2">De vorige edities waren binnen no-time uitverkocht. Verzeker je van een ticket voor de nacht dat de doden dansen.</p>
+    <div class="tickets__tiers reveal d2">
+      <div class="tier sold"><div class="tier__name">Early Bird</div><div class="tier__price">€24,50</div><div class="tier__state">Uitverkocht</div></div>
+      <div class="tier live"><div class="tier__name">Pre-sale</div><div class="tier__price">€29,50</div><div class="tier__state">Nu verkrijgbaar</div></div>
+      <div class="tier"><div class="tier__name">Regular</div><div class="tier__price">€34,50</div><div class="tier__state">Binnenkort</div></div>
+    </div>
+    <a href="https://www.goldfingerclassics.com/" target="_blank" rel="noopener" class="btn btn--gold btn--lg reveal d3">Bestel tickets
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <p class="tickets__ext reveal d3">Tickets worden veilig verwerkt via onze externe ticketpartner</p>
+  </div>
+</section>
+
+<section class="contact section-pad" id="contact" data-screen-label="Contact">
+  <div class="wrap">
+    <div class="contact__grid">
+      <div class="contact__intro">
+        <span class="kicker reveal">Vragen?</span>
+        <h2 class="display reveal d1" style="margin-top:14px">Stel ze <span class="gold-text">gerust</span></h2>
+        <p class="reveal d2">Heb je vragen of opmerkingen? Gebruik het formulier en we beloven zo snel mogelijk te reageren.</p>
+        <div class="contact__chan reveal d2">
+          <div class="chan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 6.5 8.5 6 8.5-6"/></svg><b>info@goldfingerclassics.com</b></div>
+          <div class="chan"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.3 7-11a7 7 0 1 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg><b>De Kentering · Rosmalen</b></div>
+        </div>
+      </div>
+
+      <form class="form reveal d1" id="contactForm" novalidate>
+        <div class="form__row">
+          <div class="field">
+            <label for="fn">Voornaam</label>
+            <input id="fn" type="text" required placeholder="Je voornaam">
+            <span class="field__err">Vul je voornaam in</span>
+          </div>
+          <div class="field">
+            <label for="ln">Achternaam</label>
+            <input id="ln" type="text" required placeholder="Je achternaam">
+            <span class="field__err">Vul je achternaam in</span>
+          </div>
+        </div>
+        <div class="field">
+          <label for="em">E-mailadres</label>
+          <input id="em" type="email" required placeholder="naam@email.com">
+          <span class="field__err">Vul een geldig e-mailadres in</span>
+        </div>
+        <div class="field">
+          <label for="msg">Bericht</label>
+          <textarea id="msg" required placeholder="Waar kunnen we je mee helpen?"></textarea>
+          <span class="field__err">Schrijf even een bericht</span>
+        </div>
+        <button type="submit" class="btn btn--fire btn--lg" style="justify-self:start">Verzenden
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+      <div class="form__success" id="formSuccess">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg>
+        <div><b>Gracias!</b> Je bericht is verstuurd, we reageren zo snel mogelijk.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-screen-label="Footer">
+  <div class="wrap">
+    <img class="footer__logo" src="assets/logo-goldfinger.png" alt="Goldfinger Classics">
+    <div class="footer__social">
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9.5c0-.3.2-.5.5-.5z"/></svg></a>
+      <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="3.8"/><circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 8.2c-.2-1.4-.8-2.1-2.2-2.3C17.8 5.5 12 5.5 12 5.5s-5.8 0-7.8.4C2.8 6.1 2.2 6.8 2 8.2 1.7 9.7 1.7 12 1.7 12s0 2.3.3 3.8c.2 1.4.8 2.1 2.2 2.3 2 .4 7.8.4 7.8.4s5.8 0 7.8-.4c1.4-.2 2-.9 2.2-2.3.3-1.5.3-3.8.3-3.8s0-2.3-.3-3.8zM10 15V9l5.2 3L10 15z"/></svg></a>
+    </div>
+    <img class="footer__kent" src="assets/logo-kentering.png" alt="De Kentering">
+    <div class="footer__meta">
+      <p>&copy; <span id="year">2026</span> Goldfinger Classics · Dia de los Muertos</p>
+      <p>Concept &amp; webdesign door <a href="https://mexydigital.nl" target="_blank" rel="noopener">MexyDigital</a></p>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
