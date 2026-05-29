@@ -93,11 +93,24 @@
     size(); addEventListener('resize',size); frame();
   }
 
+  function loadGtile(el){
+    const src=el.dataset.src;
+    if(!src) return;
+    el.style.backgroundImage=`url('${src}')`;
+    el.removeAttribute('data-src');
+    el.closest('.gtile').classList.add('has-img');
+  }
+  const tileObs=new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting) loadGtile(e.target); });
+  },{rootMargin:'200px'});
+  $$('.gtile__img[data-src]').forEach(el=>tileObs.observe(el));
+
   $$('.gal__tab').forEach(tab=>{
     tab.addEventListener('click',()=>{
       const id=tab.dataset.year;
       $$('.gal__tab').forEach(t=>t.classList.toggle('active',t===tab));
       $$('.gal__panel').forEach(p=>p.classList.toggle('active',p.dataset.year===id));
+      $$('.gtile__img[data-src]').forEach(el=>tileObs.observe(el));
     });
   });
 
