@@ -159,23 +159,37 @@
   const chatMessages=$('#chatMessages'), chatInput=$('#chatInput');
   const chatChips=$('#chatChips');
 
+  const _ci=d=>`<svg class="ci" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${d}</svg>`;
+  const ic={
+    chevron: _ci('<polyline points="9 18 15 12 9 6"/>'),
+    ticket:  _ci('<path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/>'),
+    phones:  _ci('<path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"/><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"/>'),
+    pin:     _ci('<path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>'),
+    cal:     _ci('<rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>'),
+    clock:   _ci('<circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>'),
+    moon:    _ci('<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>'),
+    star:    _ci('<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>'),
+    shield:  _ci('<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>'),
+    mail:    _ci('<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>'),
+  };
+
   const faq=[
     {keys:['ticket','tickets','kopen','bestel','prijs','kosten','euro','€'],
-     ans:'Tickets zijn beschikbaar via onze website.\n\n🎟 Early Bird (uitverkocht): €24,50\n🎟 Pre-sale: €29,50\n🎟 Regular: €34,50\n\nBestel via de knop bovenaan!'},
+     ans:`Tickets zijn beschikbaar via onze ticketpartner.<br><br>${ic.chevron} Zeer vroege vogels: €22,50 — Nu verkrijgbaar<br>${ic.chevron} Iets minder vroege vogels: €25,00 — Binnenkort<br>${ic.chevron} Normale vlucht: €32,50 — Binnenkort<br><br><a href="https://kentering.fairtix.io/p/goldfinger-classics-2026" target="_blank" rel="noopener" class="chat-ticket-btn">${ic.ticket} Bestel tickets</a>`},
     {keys:['lineup','line-up','dj','artiest','wie','optreden','muziek'],
-     ans:'De line-up van 2026:\n\n🎧 Darkraver — Headliner\n🎧 Ruthless — Hardstyle\n🎧 Potato — Freestyle\n🎧 Rob & MC Joe — Oldschool\n🎧 Francois — Legend\n🎧 DJ M — Resident\n🎧 PLN-B — Newschool\n\nMeer namen volgen!'},
+     ans:`De line-up van 2026:<br><br>${ic.phones} Darkraver — Headliner<br>${ic.phones} Ruthless — Hardstyle<br>${ic.phones} Potato — Freestyle<br>${ic.phones} Rob & MC Joe — Oldschool<br>${ic.phones} Francois — Legend<br>${ic.phones} DJ M — Resident<br>${ic.phones} PLN-B — Newschool<br><br>Meer namen volgen!`},
     {keys:['locatie','waar','adres','kentering','rosmalen','parkeer','auto'],
-     ans:'📍 De Kentering\nDeltalaan 162, Rosmalen\n\nGratis parkeren aanwezig. Goed bereikbaar per auto en OV.'},
+     ans:`${ic.pin} De Kentering<br>Deltalaan 162, Rosmalen<br><br>Gratis parkeren aanwezig. Goed bereikbaar per auto en OV.`},
     {keys:['datum','wanneer','date','oktober','tijd','uur','open','einde'],
-     ans:'📅 Zaterdag 31 oktober 2026\n\n🚪 Deuren open: 21:00\n🌙 Einde: 03:00'},
+     ans:`${ic.cal} Zaterdag 31 oktober 2026<br><br>${ic.clock} Deuren open: 21:00<br>${ic.moon} Einde: 03:00`},
     {keys:['dress','kleding','thema','catrina','outfit','kostuum'],
-     ans:'🎭 Thema: Dia de los Muertos\n\nDress to impress — Catrina look wordt aangemoedigd! Trek je mooiste outfit aan en verdwijn in de nacht.'},
+     ans:`${ic.star} Thema: Dia de los Muertos<br><br>Dress to impress — Catrina look wordt aangemoedigd! Trek je mooiste outfit aan en verdwijn in de nacht.`},
     {keys:['leeftijd','18','legitimatie','id','paspoort'],
-     ans:'🔞 Goldfinger Classics is 18+.\n\nLegitimatie is verplicht aan de deur. Zorg dat je je ID meeneemt!'},
+     ans:`${ic.shield} Goldfinger Classics is 18+.<br><br>Legitimatie is verplicht aan de deur. Zorg dat je je ID meeneemt!`},
     {keys:['contact','mail','email','bereik','vragen'],
-     ans:'📧 info@goldfingerclassics.com\n\nOf gebruik het contactformulier onderaan de pagina.'},
+     ans:`${ic.mail} info@goldfingerclassics.com<br><br>Of gebruik het contactformulier onderaan de pagina.`},
     {keys:['hoi','hallo','hi','hey','goedemorgen','goedemiddag'],
-     ans:'Hola! 🌺 Welkom bij Goldfinger Classics.\n\nWaar kan ik je mee helpen? Gebruik de knoppen hieronder of stel je vraag!'},
+     ans:'Hola! Welkom bij Goldfinger Classics.<br><br>Waar kan ik je mee helpen? Gebruik de knoppen hieronder of stel je vraag!'},
   ];
 
   function botReply(text){
@@ -183,13 +197,17 @@
     for(const f of faq){
       if(f.keys.some(k=>lower.includes(k))) return f.ans;
     }
-    return 'Dat weet ik helaas niet. 😕\nMail ons op info@goldfingerclassics.com of check onze socials!';
+    return `Dat weet ik helaas niet.<br>Mail ons op info@goldfingerclassics.com of check onze socials!`;
   }
 
   function addMsg(text,type){
     const el=document.createElement('div');
     el.className=`msg msg--${type}`;
-    el.textContent=text;
+    if(type==='bot'){
+      el.innerHTML=text;
+    } else {
+      el.textContent=text;
+    }
     chatMessages.appendChild(el);
     chatMessages.scrollTop=chatMessages.scrollHeight;
   }
@@ -206,7 +224,7 @@
     chatToggle.addEventListener('click',()=>{
       const open=chatWidget.classList.toggle('open');
       if(open && !chatMessages.children.length){
-        setTimeout(()=>addMsg('Hola! 🌺 Welkom bij Goldfinger Classics. Hoe kan ik je helpen?','bot'),200);
+        setTimeout(()=>addMsg('Hola! Welkom bij Goldfinger Classics. Hoe kan ik je helpen?','bot'),200);
       }
     });
     $$('.chip',chatChips).forEach(c=>c.addEventListener('click',()=>sendMsg(c.dataset.q)));
