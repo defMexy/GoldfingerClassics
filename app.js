@@ -36,8 +36,8 @@
 
   const io = new IntersectionObserver((es)=>{
     es.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
-  },{threshold:.12, rootMargin:'0px 0px -8% 0px'});
-  $$('.reveal').forEach(el=>io.observe(el));
+  },{threshold:.1, rootMargin:'0px 0px -6% 0px'});
+  $$('.reveal,.reveal--left,.reveal--right,.reveal--scale,.reveal--fade').forEach(el=>io.observe(el));
 
   const pBg = $('.hero__bg'), pCat = $('.hero__catrina'), pSmoke = $('.hero__smoke');
   let mx=0,my=0,sy=0,rafP;
