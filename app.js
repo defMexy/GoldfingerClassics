@@ -154,4 +154,69 @@
   }
 
   const yr=$('#year'); if(yr) yr.textContent=new Date().getFullYear();
+
+  const chatWidget=$('#chatWidget'), chatToggle=$('#chatToggle');
+  const chatMessages=$('#chatMessages'), chatInput=$('#chatInput');
+  const chatChips=$('#chatChips');
+
+  const faq=[
+    {keys:['ticket','tickets','kopen','bestel','prijs','kosten','euro','€'],
+     ans:'Tickets zijn beschikbaar via onze website.\n\n🎟 Early Bird (uitverkocht): €24,50\n🎟 Pre-sale: €29,50\n🎟 Regular: €34,50\n\nBestel via de knop bovenaan!'},
+    {keys:['lineup','line-up','dj','artiest','wie','optreden','muziek'],
+     ans:'De line-up van 2026:\n\n🎧 Darkraver — Headliner\n🎧 Ruthless — Hardstyle\n🎧 Potato — Freestyle\n🎧 Rob & MC Joe — Oldschool\n🎧 Francois — Legend\n🎧 DJ M — Resident\n🎧 PLN-B — Newschool\n\nMeer namen volgen!'},
+    {keys:['locatie','waar','adres','kentering','rosmalen','parkeer','auto'],
+     ans:'📍 De Kentering\nDeltalaan 162, Rosmalen\n\nGratis parkeren aanwezig. Goed bereikbaar per auto en OV.'},
+    {keys:['datum','wanneer','date','oktober','tijd','uur','open','einde'],
+     ans:'📅 Zaterdag 31 oktober 2026\n\n🚪 Deuren open: 21:00\n🌙 Einde: 03:00'},
+    {keys:['dress','kleding','thema','catrina','outfit','kostuum'],
+     ans:'🎭 Thema: Dia de los Muertos\n\nDress to impress — Catrina look wordt aangemoedigd! Trek je mooiste outfit aan en verdwijn in de nacht.'},
+    {keys:['leeftijd','18','legitimatie','id','paspoort'],
+     ans:'🔞 Goldfinger Classics is 18+.\n\nLegitimatie is verplicht aan de deur. Zorg dat je je ID meeneemt!'},
+    {keys:['contact','mail','email','bereik','vragen'],
+     ans:'📧 info@goldfingerclassics.com\n\nOf gebruik het contactformulier onderaan de pagina.'},
+    {keys:['hoi','hallo','hi','hey','goedemorgen','goedemiddag'],
+     ans:'Hola! 🌺 Welkom bij Goldfinger Classics.\n\nWaar kan ik je mee helpen? Gebruik de knoppen hieronder of stel je vraag!'},
+  ];
+
+  function botReply(text){
+    const lower=text.toLowerCase();
+    for(const f of faq){
+      if(f.keys.some(k=>lower.includes(k))) return f.ans;
+    }
+    return 'Dat weet ik helaas niet. 😕\nMail ons op info@goldfingerclassics.com of check onze socials!';
+  }
+
+  function addMsg(text,type){
+    const el=document.createElement('div');
+    el.className=`msg msg--${type}`;
+    el.textContent=text;
+    chatMessages.appendChild(el);
+    chatMessages.scrollTop=chatMessages.scrollHeight;
+  }
+
+  function sendMsg(text){
+    if(!text.trim()) return;
+    addMsg(text,'user');
+    chatInput.value='';
+    chatChips.style.display='none';
+    setTimeout(()=>addMsg(botReply(text),'bot'),420);
+  }
+
+  if(chatToggle){
+    chatToggle.addEventListener('click',()=>{
+      const open=chatWidget.classList.toggle('open');
+      if(open && !chatMessages.children.length){
+        setTimeout(()=>addMsg('Hola! 🌺 Welkom bij Goldfinger Classics. Hoe kan ik je helpen?','bot'),200);
+      }
+    });
+    $$('.chip',chatChips).forEach(c=>c.addEventListener('click',()=>sendMsg(c.dataset.q)));
+    $('#chatSend').addEventListener('click',()=>sendMsg(chatInput.value));
+    chatInput.addEventListener('keydown',e=>{ if(e.key==='Enter') sendMsg(chatInput.value); });
+  }
+
+  const backTop=$('.back-top');
+  if(backTop){
+    addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>400),{passive:true});
+    backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  }
 })();

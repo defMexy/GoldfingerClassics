@@ -308,6 +308,39 @@
   </div>
 </footer>
 
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-box" id="chatBox">
+    <div class="chat-header">
+      <div class="chat-avatar"><img src="assets/logo-goldfinger.png" alt="Goldfinger Classics"></div>
+      <div>
+        <div class="chat-name">Goldfinger Classics</div>
+        <div class="chat-status">Dia de los Muertos · 2026</div>
+      </div>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-chips" id="chatChips">
+      <button class="chip" data-q="tickets">Tickets</button>
+      <button class="chip" data-q="lineup">Line-up</button>
+      <button class="chip" data-q="locatie">Locatie</button>
+      <button class="chip" data-q="datum">Datum</button>
+      <button class="chip" data-q="dress">Dresscode</button>
+    </div>
+    <div class="chat-input-row">
+      <input id="chatInput" type="text" placeholder="Stel een vraag...">
+      <button class="chat-send" id="chatSend" aria-label="Verstuur">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+      </button>
+    </div>
+  </div>
+  <button class="chat-toggle" id="chatToggle" aria-label="Chat">
+    <svg class="ic-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    <svg class="ic-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+</div>
+
+<button class="back-top" aria-label="Terug naar boven">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
 <script src="app.js"></script>
 </body>
 </html>
